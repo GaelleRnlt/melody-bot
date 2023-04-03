@@ -6,8 +6,8 @@ import asyncio
 from pathlib import Path
 
 
-
-CHANNEL_ID = PYTHON_ENV="CHANNEL" # Récupère l'ID du channel où poster les images depuis les variables d'environnement
+env = os.environ.get("PYTHON_ENV")
+CHANNEL_ID = env="CHANNEL" # Récupère l'ID du channel où poster les images depuis les variables d'environnement
 IMAGES_DIR = Path(__file__).parent / "Images"  # Le nom du dossier où se trouvent les images
 
 intents = discord.Intents.all()
@@ -59,4 +59,4 @@ async def post_image_daily():
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-client.run(PYTHON_ENV="TOKEN")
+client.run(env="TOKEN")
