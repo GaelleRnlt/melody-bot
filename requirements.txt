@@ -2,4 +2,3 @@ git+https://github.com/Rapptz/discord.py
 dnspython==1.16.0
 Pillow==9.5.0
 asyncio==3.4.3
-boto==2.49.0
