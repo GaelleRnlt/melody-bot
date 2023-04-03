@@ -7,7 +7,7 @@ from pathlib import Path
 from boto.s3.connection import S3Connection
 
 
-env = = S3Connection(os.environ['CHANNEL'], os.environ['TOKEN'])
+env = S3Connection(os.environ['CHANNEL'], os.environ['TOKEN'])
 CHANNEL_ID = env[1] # Récupère l'ID du channel où poster les images depuis les variables d'environnement
 IMAGES_DIR = Path(__file__).parent / "Images"  # Le nom du dossier où se trouvent les images
 
